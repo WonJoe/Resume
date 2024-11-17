@@ -3,7 +3,7 @@
 #추가 파일
 
 #https 인증 파일
-.certs
+/certs
 
 # dependencies
 /node_modules
