@@ -14,7 +14,7 @@ const header = () => {
           <Nav className="me-auto">
             <Nav.Link href="/about">ABOUT</Nav.Link>
             <Nav.Link href="/project">PROJECT</Nav.Link>
-            <Nav.Link href="https://github.com/WonJoe">GITHUB</Nav.Link>
+            
 
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -31,6 +31,7 @@ const header = () => {
           </Nav>
 
           <Nav className="me-right">
+            <Nav.Link href="https://github.com/WonJoe">GITHUB</Nav.Link>
             <Nav.Link href="https://pf.kakao.com/_UkeZn">KAKAO</Nav.Link>
           </Nav>
         </Navbar.Collapse>
