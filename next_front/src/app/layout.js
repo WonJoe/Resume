@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
-        <div>
+        <div class="bg-light text-center py-3 fixed-bottom">
           <div className="container">
             <hr />
           </div>
-          <div className="container">
+          <div className="container" style={{ textAlign: "left" }}>
             <h4>최원재</h4>
             <h5>
               이메일 <b>choiwj1995@gmail.com</b>
