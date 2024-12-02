@@ -31,8 +31,18 @@ const header = () => {
           </Nav>
 
           <Nav className="me-right">
-            <Nav.Link href="https://github.com/WonJoe">GITHUB</Nav.Link>
-            <Nav.Link href="https://pf.kakao.com/_UkeZn">KAKAO</Nav.Link>
+            <Nav.Link href="https://github.com/WonJoe" target="_blank" rel="noopener noreferrer">
+              <img
+              src="githubicon.png"
+              alt="GitHub"
+              style={{ width: "24px", height: "24px" }}/>
+            </Nav.Link>
+            <Nav.Link href="https://pf.kakao.com/_UkeZn" target="_blank" rel="noopener noreferrer">
+              <img
+              src="kakaooicon.png"
+              alt="Kakao"
+              style={{ width: "24px", height: "24px" }}/>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
