@@ -1,8 +1,12 @@
+"use client";
+
 import "./globals.css";
 import Head from "next/head";
 import Header from "./header";
+import { SessionProvider } from "next-auth/react";
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="ko">
       <Head>
@@ -13,9 +17,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <Header />
+      <SessionProvider>
+      <Header/>
         {children}
-        <div class="bg-light text-center py-3 fixed-bottom">
+        <div className="bg-light text-center py-3 fixed-bottom">
           <div className="container">
             <hr />
           </div>
@@ -46,6 +51,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </div>
+        </SessionProvider>
       </body>
     </html>
   );

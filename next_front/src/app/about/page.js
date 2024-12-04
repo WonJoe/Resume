@@ -18,7 +18,7 @@ export default function Home() {
         <img src="/이력서 사진.jpg" width="100px" />
       </div>
       <div style={{ width: 100 }}>
-        about
+        <div><h3>about</h3></div>
       </div>
       <div style={{ width: 100 }}></div>
       <div style={{ width: 100 }}></div>

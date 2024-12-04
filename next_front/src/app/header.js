@@ -3,8 +3,13 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useSession, signIn, signOut } from "next-auth/react";
+
 
 const header = () => {
+
+  const { data: session } = useSession();
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -28,6 +33,8 @@ const header = () => {
               </NavDropdown.Item>
             </NavDropdown> */}
 
+            
+
           </Nav>
 
           <Nav className="me-right">
@@ -43,6 +50,27 @@ const header = () => {
               alt="Kakao"
               style={{ width: "24px", height: "24px" }}/>
             </Nav.Link>
+
+            {/* 세션 상태에 따른 버튼 표시 */}
+            {session ? (
+              <>
+                <span className="mx-3">안녕하세요, {session.user.name}님!</span>
+                <button
+                  onClick={() => signOut()}
+                  className="btn btn-outline-danger btn-sm"
+                >
+                  로그아웃
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={() => signIn()}
+                className="btn btn-outline-primary btn-sm"
+              >
+                로그인
+              </button>
+            )}
+
           </Nav>
         </Navbar.Collapse>
       </Container>
