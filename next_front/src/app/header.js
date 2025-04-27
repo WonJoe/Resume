@@ -10,6 +10,8 @@ const header = () => {
 
   const { data: session } = useSession();
 
+  console.log(session)  
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -19,6 +21,7 @@ const header = () => {
           <Nav className="me-auto">
             <Nav.Link href="/about">ABOUT</Nav.Link>
             <Nav.Link href="/project">PROJECT</Nav.Link>
+            <Nav.Link href="/socket">SOCKET</Nav.Link>
             
 
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -50,7 +53,7 @@ const header = () => {
               alt="Kakao"
               style={{ width: "24px", height: "24px" }}/>
             </Nav.Link>
-
+            <div style={{ display: "flex", alignItems: "center" }}>
             {/* 세션 상태에 따른 버튼 표시 */}
             {session ? (
               <>
@@ -62,7 +65,9 @@ const header = () => {
                   로그아웃
                 </button>
               </>
+              
             ) : (
+              
               <button
                 onClick={() => signIn()}
                 className="btn btn-outline-primary btn-sm"
@@ -70,6 +75,7 @@ const header = () => {
                 로그인
               </button>
             )}
+            </div>
 
           </Nav>
         </Navbar.Collapse>
